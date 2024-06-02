@@ -1,0 +1,36 @@
+Jun  1 16:33:07 cysl-srv03 postfix/pickup[1957]: B35F480FDC: uid=1000 from=<ubuntu@u14.cyberlab.fhnw.ch>
+Jun  1 16:33:07 cysl-srv03 postfix/cleanup[1973]: B35F480FDC: message-id=<20240601143307.B35F480FDC@mail.u14.cyberlab.fhnw.ch>
+Jun  1 16:33:07 cysl-srv03 opendkim[704]: B35F480FDC: DKIM-Signature field added (s=default, d=u14.cyberlab.fhnw.ch)
+Jun  1 16:33:07 cysl-srv03 postfix/qmgr[1958]: B35F480FDC: from=<ubuntu@u14.cyberlab.fhnw.ch>, size=409, nrcpt=1 (queue active)
+Jun  1 16:33:07 cysl-srv03 postfix/smtp[1975]: B35F480FDC: to=<reflector@cyberlab.fhnw.ch>, relay=srvMSG01.cyberlab.fhnw.ch[2001:470:b78e:8000::33]:25, delay=0.35, delays=0.14/0.04/0.04/0.13, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 4B58B6011A)
+Jun  1 16:33:07 cysl-srv03 postfix/qmgr[1958]: B35F480FDC: removed
+Jun  1 16:33:08 cysl-srv03 postfix/smtpd[1976]: connect from unknown[192.168.64.33]
+Jun  1 16:33:08 cysl-srv03 policyd-spf[1980]: prepend Received-SPF: None (mailfrom) identity=mailfrom; client-ip=192.168.64.33; helo=srvmsg01.cyberlab.fhnw.ch; envelope-from=reflector@srvmsg01.cyberlab.fhnw.ch; receiver=<UNKNOWN>
+Jun  1 16:33:09 cysl-srv03 postgrey[1635]: action=greylist, reason=new, client_name=unknown, client_address=192.168.64.33/32, sender=reflector@srvmsg01.cyberlab.fhnw.ch, recipient=ubuntu@u14.cyberlab.fhnw.ch
+Jun  1 16:33:09 cysl-srv03 postfix/smtpd[1976]: NOQUEUE: reject: RCPT from unknown[192.168.64.33]: 450 4.2.0 <ubuntu@u14.cyberlab.fhnw.ch>: Recipient address rejected: Greylisted, see http://postgrey.schweikert.ch/help/u14.cyberlab.fhnw.ch.html; from=<reflector@srvmsg01.cyberlab.fhnw.ch> to=<ubuntu@u14.cyberlab.fhnw.ch> proto=ESMTP helo=<srvMSG01.cyberlab.fhnw.ch>
+Jun  1 16:33:09 cysl-srv03 postfix/smtpd[1976]: disconnect from unknown[192.168.64.33] ehlo=1 mail=1 rcpt=0/1 data=0/1 rset=1 quit=1 commands=4/6
+Jun  1 16:36:29 cysl-srv03 postfix/anvil[1978]: statistics: max connection rate 1/60s for (smtp:192.168.64.33) at Jun  1 16:33:08
+Jun  1 16:36:29 cysl-srv03 postfix/anvil[1978]: statistics: max connection count 1 for (smtp:192.168.64.33) at Jun  1 16:33:08
+Jun  1 16:36:29 cysl-srv03 postfix/anvil[1978]: statistics: max cache size 1 at Jun  1 16:33:08
+Jun  1 16:38:55 cysl-srv03 postfix/smtpd[2005]: connect from unknown[192.168.64.33]
+Jun  1 16:38:55 cysl-srv03 policyd-spf[2010]: prepend Received-SPF: None (mailfrom) identity=mailfrom; client-ip=192.168.64.33; helo=srvmsg01.cyberlab.fhnw.ch; envelope-from=reflector@srvmsg01.cyberlab.fhnw.ch; receiver=<UNKNOWN>
+Jun  1 16:38:55 cysl-srv03 postgrey[1635]: action=pass, reason=triplet found, delay=347, client_name=unknown, client_address=192.168.64.33/32, sender=reflector@srvmsg01.cyberlab.fhnw.ch, recipient=ubuntu@u14.cyberlab.fhnw.ch
+Jun  1 16:38:55 cysl-srv03 postfix/smtpd[2005]: 6F37380FDC: client=unknown[192.168.64.33]
+Jun  1 16:38:55 cysl-srv03 postfix/cleanup[2011]: 6F37380FDC: message-id=<20240601143310.73A2E6014F@srvMSG01.cyberlab.fhnw.ch>
+Jun  1 16:38:55 cysl-srv03 opendkim[704]: 6F37380FDC: [192.168.64.33] [192.168.64.33] not internal
+Jun  1 16:38:55 cysl-srv03 opendkim[704]: 6F37380FDC: not authenticated
+Jun  1 16:38:55 cysl-srv03 opendkim[704]: 6F37380FDC: no signature data
+Jun  1 16:38:55 cysl-srv03 postfix/qmgr[1958]: 6F37380FDC: from=<reflector@srvmsg01.cyberlab.fhnw.ch>, size=4810, nrcpt=1 (queue active)
+Jun  1 16:38:55 cysl-srv03 postfix/smtpd[2005]: disconnect from unknown[192.168.64.33] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Jun  1 16:39:05 cysl-srv03 postfix/smtpd[2016]: connect from localhost[127.0.0.1]
+Jun  1 16:39:05 cysl-srv03 postfix/smtpd[2016]: 9C77481049: client=localhost[127.0.0.1]
+Jun  1 16:39:05 cysl-srv03 postfix/cleanup[2011]: 9C77481049: message-id=<20240601143310.73A2E6014F@srvMSG01.cyberlab.fhnw.ch>
+Jun  1 16:39:05 cysl-srv03 opendkim[704]: 9C77481049: no signing table match for 'reflector@srvmsg01.cyberlab.fhnw.ch'
+Jun  1 16:39:05 cysl-srv03 opendkim[704]: 9C77481049: no signature data
+Jun  1 16:39:05 cysl-srv03 postfix/qmgr[1958]: 9C77481049: from=<reflector@srvmsg01.cyberlab.fhnw.ch>, size=5310, nrcpt=1 (queue active)
+Jun  1 16:39:05 cysl-srv03 postfix/smtpd[2016]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Jun  1 16:39:05 cysl-srv03 amavis[1293]: (01293-02) Passed CLEAN {RelayedOpenRelay}, [192.168.64.33]:43608 <reflector@srvmsg01.cyberlab.fhnw.ch> -> <ubuntu@u14.cyberlab.fhnw.ch>, Queue-ID: 6F37380FDC, Message-ID: <20240601143310.73A2E6014F@srvmsg01.cyberlab.fhnw.ch>, mail_id: BK7X-SidtCL9, Hits: -0.999, size: 4775, queued_as: 9C77481049, 10065 ms
+Jun  1 16:39:05 cysl-srv03 postfix/smtp[2012]: 6F37380FDC: to=<ubuntu@u14.cyberlab.fhnw.ch>, relay=127.0.0.1[127.0.0.1]:10024, delay=10, delays=0.19/0.01/0.17/10, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10025): 250 2.0.0 Ok: queued as 9C77481049)
+Jun  1 16:39:05 cysl-srv03 postfix/qmgr[1958]: 6F37380FDC: removed
+Jun  1 16:39:05 cysl-srv03 postfix/local[2017]: 9C77481049: to=<ubuntu@u14.cyberlab.fhnw.ch>, relay=local, delay=0.06, delays=0.02/0.03/0/0.02, dsn=2.0.0, status=sent (delivered to maildir)
+Jun  1 16:39:05 cysl-srv03 postfix/qmgr[1958]: 9C77481049: removed

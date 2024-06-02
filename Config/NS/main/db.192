@@ -1,0 +1,15 @@
+;
+; BIND reverse data file for local 192.168.96.0/22 net
+;
+$TTL    604800
+@       IN      SOA     ns1.u14.cyberlab.fhnw.ch. mail.u14.cyberlab.fhnw.ch. (
+                              3         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      localhost.
+112     IN      PTR     ns1.u14.cyberlab.fhnw.ch.
+113     IN      PTR     ns2.u14.cyberlab.fhnw.ch.
+114     IN      PTR     mail.u14.cyberlab.fhnw.ch.

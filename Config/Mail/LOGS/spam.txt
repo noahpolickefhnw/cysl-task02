@@ -1,0 +1,19 @@
+Jun  1 17:28:28 cysl-srv03 postfix/pickup[7144]: 52307810CF: uid=1000 from=<ubuntu@u14.cyberlab.fhnw.ch>
+Jun  1 17:28:28 cysl-srv03 postfix/cleanup[7179]: 52307810CF: message-id=<20240601152828.52307810CF@mail.u14.cyberlab.fhnw.ch>
+Jun  1 17:28:28 cysl-srv03 opendkim[704]: 52307810CF: DKIM-Signature field added (s=default, d=u14.cyberlab.fhnw.ch)
+Jun  1 17:28:28 cysl-srv03 postfix/qmgr[7145]: 52307810CF: from=<ubuntu@u14.cyberlab.fhnw.ch>, size=416, nrcpt=1 (queue active)
+Jun  1 17:28:28 cysl-srv03 postfix/smtp[7181]: 52307810CF: to=<reflector@cyberlab.fhnw.ch>, relay=srvMSG01.cyberlab.fhnw.ch[2001:470:b78e:8000::33]:25, delay=0.1, delays=0.06/0/0.01/0.04, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as B293A60122)
+Jun  1 17:28:28 cysl-srv03 postfix/qmgr[7145]: 52307810CF: removed
+Jun  1 17:28:28 cysl-srv03 postfix/smtpd[7182]: connect from unknown[192.168.64.33]
+Jun  1 17:28:28 cysl-srv03 policyd-spf[7184]: prepend Received-SPF: None (mailfrom) identity=mailfrom; client-ip=192.168.64.33; helo=srvmsg01.cyberlab.fhnw.ch; envelope-from=reflector@srvmsg01.cyberlab.fhnw.ch; receiver=<UNKNOWN>
+Jun  1 17:28:28 cysl-srv03 postgrey[1635]: action=pass, reason=triplet found, client_name=unknown, client_address=192.168.64.33/32, sender=reflector@srvmsg01.cyberlab.fhnw.ch, recipient=ubuntu@u14.cyberlab.fhnw.ch
+Jun  1 17:28:28 cysl-srv03 postfix/smtpd[7182]: 99A5D810C4: client=unknown[192.168.64.33]
+Jun  1 17:28:28 cysl-srv03 postfix/cleanup[7179]: 99A5D810C4: message-id=<20240601152830.D299D6016D@srvMSG01.cyberlab.fhnw.ch>
+Jun  1 17:28:28 cysl-srv03 opendkim[704]: 99A5D810C4: [192.168.64.33] [192.168.64.33] not internal
+Jun  1 17:28:28 cysl-srv03 opendkim[704]: 99A5D810C4: not authenticated
+Jun  1 17:28:28 cysl-srv03 opendkim[704]: 99A5D810C4: no signature data
+Jun  1 17:28:28 cysl-srv03 postfix/qmgr[7145]: 99A5D810C4: from=<reflector@srvmsg01.cyberlab.fhnw.ch>, size=4801, nrcpt=1 (queue active)
+Jun  1 17:28:28 cysl-srv03 postfix/smtpd[7182]: disconnect from unknown[192.168.64.33] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Jun  1 17:28:38 cysl-srv03 amavis[1293]: (01293-05) Blocked SPAM {DiscardedOpenRelay,Quarantined}, [192.168.64.33]:33442 <reflector@srvmsg01.cyberlab.fhnw.ch> -> <ubuntu@u14.cyberlab.fhnw.ch>, quarantine: i/spam-icrb9_O9NX3W.gz, Queue-ID: 99A5D810C4, Message-ID: <20240601152830.D299D6016D@srvmsg01.cyberlab.fhnw.ch>, mail_id: icrb9_O9NX3W, Hits: 999.001, size: 4766, 10158 ms
+Jun  1 17:28:38 cysl-srv03 postfix/smtp[7185]: 99A5D810C4: to=<ubuntu@u14.cyberlab.fhnw.ch>, relay=127.0.0.1[127.0.0.1]:10024, delay=10, delays=0.04/0/0/10, dsn=2.7.0, status=sent (250 2.7.0 Ok, discarded, id=01293-05 - spam)
+Jun  1 17:28:38 cysl-srv03 postfix/qmgr[7145]: 99A5D810C4: removed
